@@ -1,0 +1,34 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    val primerInput = "5"  // simula la entrada del usuario
+    val segundoInput = "a" // simula la entrada del usuario
+    val operacion = "division" // aqui se coloca la operación a realizar
+
+    // Validar que sean números y no letras 
+    val primerValor = primerInput.toIntOrNull()
+    val segundoValor = segundoInput.toIntOrNull()
+    
+    //verificar si el valor no es nulo
+    if (primerValor == null || segundoValor == null) {
+        println("Entrada inválida. Debe ser un número.")
+        return
+    }
+
+    val resultado = when (operacion) { //when revisa el valor de operacion
+        "suma" -> sumar(primerValor, segundoValor) //si en operacion el valor es suma se ejecuta 
+        "resta" -> restar(primerValor, segundoValor) //si en operacion el valor es resta se ejecuta 
+        "multiplicacion" -> multiplicar(primerValor, segundoValor) //si en operacion el valor es multiplicacion se ejecuta 
+        "division" -> dividir(primerValor, segundoValor) //si en operacion el valor es division se ejecuta 
+        else -> "Operación no válida" // si no es una operacion valida 
+    }
+
+    println("Resultado: $resultado") //imprime el resultado
+}
+
+fun sumar(a: Int, b: Int) = a + b // muestra la suma
+fun restar(a: Int, b: Int) = a - b // muestra la resta
+fun multiplicar(a: Int, b: Int) = a * b // muestra la multiplicacion
+fun dividir(a: Int, b: Int) = if (b != 0) a / b else "No se puede dividir entre 0" // muestra la division y mensaje de error si es cero

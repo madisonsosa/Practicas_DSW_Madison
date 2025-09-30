@@ -1,0 +1,59 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+/*
+fun main() {
+    //areglo definido
+    val numbers = arrayOf(1,2,3,4)
+    
+    //arreglo nulo
+    /*val numbersNull: Array<Int?> = arrayOfNulls(3)
+    numbersNull[0] = 2
+    numbersNull[1] = 3
+    numbersNull[2] = 0
+    
+    
+    for(number in numbersNull){
+        println(number)
+    }*/
+    
+    for(i in numbers.indices){
+        if(i == 0){
+            numbersNull[i] = 2
+            println("Indece: $i, Valor =${numbersNull[i]}")
+        }
+    }
+}
+*/
+
+fun main() {
+    //areglo de 5 notas
+    val notas = arrayOf(10,9,8,8,9)
+    
+    //arreglo null
+    val notasNull: Array<Int?> = arrayOfNulls(5)
+    notasNull[0] = 10
+    notasNull[1] = 9
+    notasNull[2] = 8
+    notasNull[3] = 8
+    notasNull[4] = 9
+    
+    // usa índices de notas. pero muestra los valores de notasNull
+    for(i in notas.indices){
+        println("Indice: " + i + " Valor= " + notasNull[i])
+    }
+    
+    //Calcular promedio
+    var suma = 0
+    var a = 0
+    for(n in notasNull){
+        if(n != null){
+            suma = suma + n
+            a = a + 1
+        }
+    }
+    
+    var prom = suma / a
+    println("promedio= " + prom)
+}

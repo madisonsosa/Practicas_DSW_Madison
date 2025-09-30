@@ -3,6 +3,7 @@
  * play.kotlinlang.org
  */
 /*
+ // ejemplo de null
 fun main() {
     //areglo definido
     val numbers = arrayOf(1,2,3,4)
@@ -27,6 +28,8 @@ fun main() {
 }
 */
 
+/*
+ //ejercicio de 5 notas con null
 fun main() {
     //areglo de 5 notas
     val notas = arrayOf(10,9,8,8,9)
@@ -56,4 +59,35 @@ fun main() {
     
     var prom = suma / a
     println("promedio= " + prom)
+}
+*/
+
+/*
+ //ejemplo lista 
+fun main(){
+    val daysOfWeek = listOf("Lunes", "Martes", "Miercoles", "Jueves")
+    println(daysOfWeek)
+    //daysOfWeek.add("Viernes")
+    //println(daysOfWeek")
+    
+    val fruits = mutableListOf("Mango", "Jocote", "Manzana")
+    fruits.add("Kiwi")
+    fruits.add("Fresa")
+    println(fruits)
+    fruits.remove("Fresa")
+    println(fruits)
+    
+    println(4 % 2 == 0)
+}
+*/
+
+//Codigo que permita guardar en una lista numeros pares entre 1 y 100
+fun main(){
+    val numPar = mutableListOf<Int>()
+
+for (i in 1..100) //toma los valores desde 1 hasta 100, uno por uno.
+    if (i % 2 == 0) { //revisa si el número es par
+        numPar.add(i) //si el número es par lo agrega a la lista
+    }
+    println(numPar)//imprime la lista
 }
